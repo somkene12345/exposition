@@ -1,8 +1,9 @@
 workflows:
   main:
     name: Build APK
-    environment:
-      flutter: 2.10.3
+steps:
+      - name: Download Flutter SDK
+        command: wget --timeout=600 --tries=3 https://storage.googleapis.com/flutter_infra/releases/stable/windows/flutter_windows_v2.10.3-stable.zip
     scripts:
       - name: Install dependencies
         script: ./gradlew dependencies

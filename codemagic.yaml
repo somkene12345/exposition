@@ -2,9 +2,7 @@ workflows:
   main:
     name: Build APK
     environment:
-      machine:
-        type: mac-mini-2020
-        image: latest
+      flutter: latest
     scripts:
       - name: Install dependencies
         script: ./gradlew dependencies

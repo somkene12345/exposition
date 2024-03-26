@@ -2,7 +2,7 @@ workflows:
   main:
     name: Build APK
     environment:
-      flutter: latest
+      flutter: 2.10.3
     scripts:
       - name: Install dependencies
         script: ./gradlew dependencies

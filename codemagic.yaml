@@ -1,11 +1,12 @@
 workflows:
   main:
-    steps:
-      - checkout: self
-      - setup-android-sdk:
-          components: build-tools-31.0.0, android-31
-      - run:
-          name: Build APK
-          command: ./gradlew assembleRelease
-      - artifacts:
-          - app/build/outputs/**/*.apk
+    name: Build APK
+    environment:
+      machine:
+        type: mac-mini-2020
+        image: latest
+    scripts:
+      - name: Install dependencies
+        script: ./gradlew dependencies
+      - name: Build APK
+        script: ./gradlew assembleRelease

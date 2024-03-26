@@ -1,17 +1,14 @@
 workflows:
   main:
-    name: Build APK
-    steps:
-      - name: Download Flutter SDK
-        script: |
-          curl -O https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_2.10.3-stable.zip
-
+    name: Build and Test
+    environment:
+      node: latest
+      npm: latest
+      react_native: latest
+    scripts:
       - name: Install dependencies
-        script: |
-          cd android
-          ./gradlew dependencies
-
+        script: npm install
+      - name: Run tests
+        script: npm test
       - name: Build APK
-        script: |
-          cd android
-          ./gradlew assembleRelease
+        script: npm run android:build

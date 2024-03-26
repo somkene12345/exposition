@@ -8,8 +8,10 @@ workflows:
 
       - name: Install dependencies
         script: |
+          cd android
           ./gradlew dependencies
 
       - name: Build APK
         script: |
+          cd android
           ./gradlew assembleRelease

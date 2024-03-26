@@ -3,7 +3,7 @@ workflows:
     name: Build APK
 steps:
       - name: Download Flutter SDK
-        command: curl -O https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_2.10.3-stable.zip
+        curl -O https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_2.10.3-stable.zip
     scripts:
       - name: Install dependencies
         script: ./gradlew dependencies

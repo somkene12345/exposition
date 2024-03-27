@@ -9,7 +9,7 @@ workflows:
         script: npm install
       - name: Build APK
         script: |
-        export JAVA_HOME: /usr/lib/jvm/java-1.17.0-openjdk-amd64 # Specify the path to Java 17
+          export JAVA_HOME: /usr/lib/jvm/java-1.17.0-openjdk-amd64 # Specify the path to Java 17
           npx react-native bundle --platform android --dev false --entry-file App.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && 
           cd android && 
           chmod +x ./gradlew &&   # Set executable permission for gradlew script

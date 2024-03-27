@@ -4,6 +4,7 @@ workflows:
     environment:
       node: latest
       npm: latest
+      JAVA_HOME: /usr/lib/jvm/java-1.17.0-openjdk-amd64 # Specify the path to Java 17
     scripts:
       - name: Install dependencies
         script: npm install

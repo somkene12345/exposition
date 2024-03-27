@@ -1,4 +1,5 @@
 // metro.config.js
 module.exports = {
-    // Add configuration options here
+    // Specify the entry file for your React Native app
+    entry: './App.js',
   };

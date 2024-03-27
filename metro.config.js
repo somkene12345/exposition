@@ -5,7 +5,6 @@ module.exports = (async () => {
   const defaultConfig = await getDefaultConfig();
   return {
     ...defaultConfig,
-    // Specify the entry file for your React Native app
-    entry: './App.js',
+    // Add any additional configuration here
   };
 })();

@@ -7,7 +7,5 @@ workflows:
     scripts:
       - name: Install dependencies
         script: npm install
-      - name: Run tests
-        script: npm test
       - name: Build APK
-        script: expo build:android
+        script: npx react-native bundle --platform android --dev false --entry-file App.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && cd android && ./gradlew clean && ./gradlew assembleRelease

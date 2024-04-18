@@ -1,0 +1,7 @@
+directories:
+  output: releases
+  buildResources: build
+appId: com.somkeneex.exposition
+productName: exposition
+files: []
+electronVersion: 30.0.0

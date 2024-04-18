@@ -1,7 +1,6 @@
 {
   "name": "exposition",
   "version": "1.2.1",
-  "main":"electron.js",
   "description": "A simple notetaking app made with expo and react for windows",
   "author": "Somkene Okechukwu <somkeneokechukwu@outlook.com>",
   "build": {
@@ -13,7 +12,7 @@
   },
   "scripts": {
     "start": "expo start",
-    "electron":"electron .",
+    "electron":"electron electron.js",
     "dist": "electron-builder",
     "android": "expo run android",
     "ios": "react-scripts test",

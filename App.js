@@ -26,40 +26,44 @@ export default function App() {
       setText("Let's write!");
     }, 3000);
 
+    const timerex = setTimeout(() => {
+      setText("e");
+    }, 3500);
+
     const timerx = setTimeout(() => {
-      setText("x");
+      setText("ex");
     }, 4000);
 
     const timerxp = setTimeout(() => {
-      setText("xp");
+      setText("exp");
     }, 4500);
 
 const timerxpo = setTimeout(() => {
-      setText("xpo");
+      setText("expo");
     }, 5000);
 
     const timerxpos = setTimeout(() => {
-      setText("xpos");
+      setText("expos");
     }, 5500);
 
     const timerxposi = setTimeout(() => {
-      setText("xposi");
+      setText("exposi");
     }, 6000);
 
     const timerxposit = setTimeout(() => {
-      setText("xposit");
+      setText("exposit");
     }, 6500);
 
     const timerxpositi = setTimeout(() => {
-      setText("xpositi");
+      setText("expositi");
     }, 7000);
 
     const timerxpositio = setTimeout(() => {
-      setText("xpositio");
+      setText("expositio");
     }, 7500);
 
     const timerxposition = setTimeout(() => {
-      setText("xposition");
+      setText("exposition");
     }, 8000);
 
     const timer3 = setTimeout(() => {
@@ -74,6 +78,7 @@ const timerxpo = setTimeout(() => {
       clearTimeout(timer);
       clearTimeout(timer2);
       clearTimeout(timer3);
+      clearTimeout(timerex);
       clearTimeout(timerx);
       clearTimeout(timerxp);
       clearTimeout(timerxpo);
@@ -278,9 +283,9 @@ const styles = StyleSheet.create({
   },
   homePage: {
     position: 'absolute',
-    top: 20,
-    right: 20,
-    zIndex: 1, // Ensure the button is above the gradient background
+    top: 1,
+    right: 1,
+    zIndex: 2, // Ensure the button is above the gradient background
   },
   createButton: {
     backgroundColor: 'transparent',

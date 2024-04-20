@@ -1,0 +1,34 @@
+name: Build Electron App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20.11.0'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build Electron app
+      run: npm run build
+
+    - name: Package Electron app
+      run: npm run electron:build
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: electron-app
+        path: dist/exposition-setup-*.exe

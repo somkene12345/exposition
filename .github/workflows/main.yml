@@ -18,6 +18,9 @@ jobs:
       with:
         node-version: '20.11.0'
 
+    - name: Set up Git credentials
+      run: echo "machine github.com login ${{ secrets.GH_USERNAME }} password ${{ secrets.GH_TOKEN }}" > ~/.netrc
+
     - name: Install dependencies
       run: npm install
 

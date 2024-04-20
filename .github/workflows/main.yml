@@ -24,13 +24,13 @@ jobs:
     - name: Build Electron app
       run: npm run build
 
-    - name: Set up Git
-      run: |
-        git config --global user.email "actions@github.com"
-        git config --global user.name "GitHub Actions"
+    - name: Package Electron app
+      run: npm run electron:build
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
-    - name: Push artifacts to GitHub
-      run: |
-        git add .
-        git commit -m "Add built artifacts"
-        git push https://somkene12345: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@github.com/somkene12345/exposition.git HEAD:main
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: electron-app
+        path: dist/exposition-setup-*.exe

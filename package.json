@@ -9,12 +9,17 @@
     "productName": "exposition",
     "directories": {
       "output": "releases"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/x11.ico"
     }
   },
   "scripts": {
     "start": "expo start",
     "electron": "electron .",
-    "dist": "electron-builder",
+    "build": "electron-builder",
+    "electron:build": "electron-builder",
     "android": "expo run android",
     "ios": "react-scripts test",
     "eject": "expo run ios"

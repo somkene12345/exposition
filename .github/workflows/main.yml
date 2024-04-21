@@ -33,4 +33,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: electron-app
-        path: dist/exposition-setup-*.exe
+        path: releases/exposition-setup-*.exe

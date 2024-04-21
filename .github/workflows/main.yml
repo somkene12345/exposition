@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-11
 
     steps:
     - name: Checkout code
@@ -33,4 +33,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: electron-app
-        path: releases/exposition-setup-*.exe
+        path: releases/exposition-1.2.1.exe

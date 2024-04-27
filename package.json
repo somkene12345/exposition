@@ -3,7 +3,10 @@
   "version": "1.2.1",
   "main": "electron.js",
   "description": "A simple notetaking app made with expo and react for windows",
-  "author": "Somkene Okechukwu <somkeneokechukwu@outlook.com>",
+  "author": {
+    "name": "Somkene Okechukwu",
+    "email": "somkeneokechukwu@outlook.com"
+  },
   "build": {
     "appId": "com.somkeneex.exposition",
     "productName": "exposition",
@@ -13,6 +16,14 @@
     "win": {
       "target": "nsis",
       "icon": "assets/x11.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "installerIcon": "assets/x11.ico",
+      "uninstallerIcon": "assets/x11.ico",
+      "uninstallDisplayName": "exposition",
+      "license": "license.md",
+      "allowToChangeInstallationDirectory": "true"
     }
   },
   "scripts": {
@@ -46,7 +57,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.24.3",
-    "electron": "^30.0.0",
+    "electron": "^30.0.1",
     "electron-builder": "^24.13.3",
     "electron-is-dev": "^3.0.1",
     "expo": "^50.0.14",

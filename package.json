@@ -1,36 +1,14 @@
 {
   "name": "exposition",
   "version": "1.2.1",
-  "main": "electron.js",
   "description": "A simple notetaking app made with expo and react for windows",
+  "license": "MIT",
   "author": {
     "name": "Somkene Okechukwu",
     "email": "somkeneokechukwu@outlook.com"
   },
-  "build": {
-    "appId": "com.somkeneex.exposition",
-    "productName": "exposition",
-    "directories": {
-      "output": "releases"
-    },
-    "win": {
-      "target": "nsis",
-      "icon": "assets/x11.ico"
-    },
-    "nsis": {
-      "oneClick": false,
-      "installerIcon": "assets/x11.ico",
-      "uninstallerIcon": "assets/x11.ico",
-      "uninstallDisplayName": "exposition",
-      "license": "license.md",
-      "allowToChangeInstallationDirectory": "true"
-    }
-  },
   "scripts": {
     "start": "expo start",
-    "electron": "electron .",
-    "build": "electron-builder",
-    "electron:build": "electron-builder",
     "android": "expo run android",
     "ios": "react-scripts test",
     "eject": "expo run ios"
@@ -43,7 +21,6 @@
     "expo-linear-gradient": "^12.7.2",
     "expo-splash-screen": "^0.26.4",
     "expo-status-bar": "~1.11.1",
-    "fs": "^0.0.1-security",
     "jest-cli": "^29.7.0",
     "js-yaml": "^3.14.1",
     "path": "^0.12.7",
@@ -57,9 +34,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.24.3",
-    "electron": "^30.0.1",
-    "electron-builder": "^24.13.3",
-    "electron-is-dev": "^3.0.1",
     "expo": "^50.0.14",
     "expo-cli": "^6.3.10"
   },

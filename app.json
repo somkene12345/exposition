@@ -1,37 +1,39 @@
 {
   "expo": {
-  "name": "exposition",
-  "slug": "exposition",
-  "version": "1.2.1",
-  "orientation": "portrait",
-  "icon": "./assets/x.png",
-  "userInterfaceStyle": "light",
-  "splash": {
-  "image": "./assets/xs.png",
-  "resizeMode": "contain",
-  "backgroundColor": "#282c34"
-  },
-  "assetBundlePatterns":
-  "**/*"
-  ,
-  "android": {
-  "adaptiveIcon": {
-  "foregroundImage": "./assets/x.png",
-  "backgroundColor": "#282c34"
-  },
-  "package": "com.somkeneex.exposition"
-  },
-  "web": {
-  "favicon": "./assets/xw.png"
-  },
-  "extra": {
-  "eas": {
-  "projectId": "eda81231-77dc-4498-8f13-91a356883824"
+    "name": "exposition",
+    "slug": "exposition",
+    "version": "1.2.1",
+    "orientation": "portrait",
+    "icon": "./assets/x.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/xs.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#282c34",
+      "packagerOpts": {
+        "scheme": "https"
+      }
+    },
+    "assetBundlePatterns": "**/*",
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/x.png",
+        "backgroundColor": "#282c34"
+      },
+      "package": "com.somkeneex.exposition"
+    },
+    "web": {
+      "favicon": "./assets/xw.png",
+      "output": "server",
+      "bundler": "metro"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "eda81231-77dc-4498-8f13-91a356883824"
+      }
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
-  },
-  "plugins":"expo-build-properties",
-  "windows": {
-  "buildType": "exe"
-  }
-  }
-  }
+}

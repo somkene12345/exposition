@@ -24,9 +24,10 @@
     },
     "web": {
       "favicon": "./assets/xw.png",
-      "output": "server",
-      "bundler": "metro"
+      "bundler": "metro",
+      "output": "static"
     },
+    "scheme": "exposition-scheme",
     "extra": {
       "eas": {
         "projectId": "eda81231-77dc-4498-8f13-91a356883824"

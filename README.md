@@ -1,2 +1,2 @@
 ﻿# exposition
-# It is a notetaking web app
+# It is a web app
